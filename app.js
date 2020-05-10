@@ -4,18 +4,20 @@ var context = canvas.getContext('2d');
 var canvasWidth = canvas.width;
 var canvasHeight = canvas.height;
 
-var size = 100;
-var posX = canvasWidth / 2 * 0.75;
-var posY = canvasHeight / 2 * 0.75;
+var width = 250;
+var height = 50;
+var posX = (canvasWidth - width) / 2;
+var posY = (canvasHeight - height) / 2;
 
-context.fillStyle = "rgba(255,0,0, .5)";
+context.fillStyle = "red";
 
-context.fillRect( posX, posY, size, size);
+context.fillRect(posX, posY - height, width, height);
 
-posX += size *0.50;
-posY += size *0.50;
+context.fillStyle = "white";
 
-context.fillStyle = "rgba(0,0,255, .5)";
+context.fillRect(posX, posY , width, height);
 
-context.fillRect( posX, posY, size, size);
+context.fillStyle = "green";
+
+context.fillRect(posX, posY + height, width, height);
 
